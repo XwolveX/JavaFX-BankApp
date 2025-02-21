@@ -1,4 +1,4 @@
-package com.javafxbankapp;
+package com.javafxbankapp.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
