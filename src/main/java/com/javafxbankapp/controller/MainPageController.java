@@ -1,5 +1,6 @@
 package com.javafxbankapp.controller;
-
+import com.javafxbankapp.structure.Customer;
+import com.javafxbankapp.Implement.SessionManager;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -22,14 +23,18 @@ public class MainPageController implements Initializable {
 
     @FXML
     private Label nameLabel;
-
+    @FXML
+    private Label balanceLabel;
+    @FXML
+    private Label cardNumberLabel;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         // Ensure contentPane is taller than ScrollPane to allow scrolling
         anchorPane.setPrefHeight(1200);
 
-        // Update labels with dynamic values
-            nameLabel.setText("John Doe");
-            rankLabel.setText("Gold Member");
+        Customer customer = SessionManager.getCustomer();
+        nameLabel.setText(customer.getName());
+        balanceLabel.setText("$" + customer.getBalance());
+        rankLabel.setText(customer.getRank());
     }
 }
