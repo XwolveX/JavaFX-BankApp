@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -31,5 +32,6 @@
       </Button>
       <Text fill="WHITE" layoutX="110.0" layoutY="605.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Represent by @Nguyen Dinh Lam" wrappingWidth="181.365966796875" />
       <Text fill="WHITE" layoutX="187.0" layoutY="631.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2025" />
+      <Label fx:id="errorLabel" layoutX="102.0" layoutY="369.0" prefHeight="18.0" prefWidth="196.0" textFill="RED" />
    </children>
 </AnchorPane>
