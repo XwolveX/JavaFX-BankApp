@@ -1,40 +1,35 @@
 package com.javafxbankapp.controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.layout.AnchorPane;
 
-public class MainPageController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    @FXML
-    private void handleDeposit() {
-        showAlert("Nạp tiền", "Chức năng nạp tiền đang được phát triển.");
-    }
-
-    @FXML
-    private void handleWithdraw() {
-        showAlert("Rút tiền", "Chức năng rút tiền đang được phát triển.");
-    }
+public class MainPageController implements Initializable {
 
     @FXML
-    private void handleTransfer() {
-        showAlert("Chuyển khoản", "Chức năng chuyển khoản đang được phát triển.");
-    }
+    private ScrollPane scrollPane;  // Scrollable container
 
     @FXML
-    private void handleTransactionHistory() {
-        showAlert("Lịch sử giao dịch", "Chức năng lịch sử giao dịch đang được phát triển.");
-    }
+    private AnchorPane anchorPane; // Content inside the ScrollPane
 
     @FXML
-    private void handleLogout() {
-        showAlert("Đăng xuất", "Bạn đã đăng xuất thành công.");
-    }
+    private Label rankLabel; // Displays rank
 
-    private void showAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
+    @FXML
+    private Label nameLabel;
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        // Ensure contentPane is taller than ScrollPane to allow scrolling
+        anchorPane.setPrefHeight(1200);
+
+        // Update labels with dynamic values
+            nameLabel.setText("John Doe");
+            rankLabel.setText("Gold Member");
     }
 }
