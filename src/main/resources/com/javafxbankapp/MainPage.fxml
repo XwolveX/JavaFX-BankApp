@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.javafxbankapp.controller.MainPageController"
-            prefHeight="700" prefWidth="400">
 
+<AnchorPane prefHeight="700.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafxbankapp.controller.MainPageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#181818" height="700.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+    <AnchorPane layoutY="126.0" minHeight="0.0" minWidth="0.0" prefHeight="1288.0" prefWidth="400.0" />
+      <ScrollPane fitToWidth="true" layoutY="128.0" prefHeight="572.0" prefWidth="400.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="LIME" height="33.0" layoutX="152.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" width="97.0" />
+      <Text layoutX="157.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OWL THE GOD" wrappingWidth="86.93670654296875">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+   </children>
 </AnchorPane>
