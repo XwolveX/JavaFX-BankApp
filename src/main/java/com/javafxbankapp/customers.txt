@@ -1,0 +1,5 @@
+0987654321,pass123,John Doe,1500.75,30,john.doe@email.com,Silver,123 Main St
+0912345678,securePass,Alice Smith,2500.50,28,alice.smith@email.com,Gold,456 Elm St
+0976543210,mySecret,Bob Johnson,500.25,35,bob.johnson@email.com,Bronze,789 Oak St
+0965432109,abc12345,Emma Brown,3200.80,40,emma.brown@email.com,Platinum,159 Pine St
+0954321098,qwerty99,David Wilson,1200.00,33,david.wilson@email.com,Silver,753 Maple St
