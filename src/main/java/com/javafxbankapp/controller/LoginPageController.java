@@ -32,8 +32,8 @@ public class LoginPageController {
 
         if (loggedInCustomer != null) {
             try {
-                //load scene
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
+                // Load scene
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/javafxbankapp/MainPage.fxml"));
                 Parent root = loader.load();
                 Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
                 stage.setScene(new Scene(root));
