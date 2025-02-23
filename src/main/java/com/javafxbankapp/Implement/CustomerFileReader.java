@@ -14,14 +14,13 @@ public class CustomerFileReader {
                 String[] data = line.split(",");
                 if (data.length == 8) {
                     Customer customer = new Customer(
-                            data[0], // username (Phone Number)
-                            data[1], // password
-                            data[2], // name
-                            Float.parseFloat(data[3]), // balance
-                            Integer.parseInt(data[4]), // age
-                            data[5], // email
-                            data[6], // rank
-                            data[7]  // address
+                            data[0], //(Phone Number)
+                            data[1], // name
+                            Float.parseFloat(data[2]), // balance
+                            Integer.parseInt(data[3]), // age
+                            data[4], // email
+                            data[5], // rank
+                            data[6]  // address
                     );
                     customers.add(customer);
                 }
@@ -36,8 +35,7 @@ public class CustomerFileReader {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(filePath))) {
             for (Customer customer : customers) {
                 bw.write(String.join(",",
-                        customer.getUsername(),
-                        customer.getPassword(),
+                        customer.getPhone(),
                         customer.getName(),
                         customer.getBalance(),
                         customer.getAge().toString(),

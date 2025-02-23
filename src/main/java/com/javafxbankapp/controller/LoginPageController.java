@@ -1,6 +1,7 @@
 package com.javafxbankapp.controller;
 
 import com.javafxbankapp.Implement.SessionManager;
+import com.javafxbankapp.structure.Account;
 import com.javafxbankapp.structure.Customer;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -29,12 +30,10 @@ public class LoginPageController {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        Customer loggedInCustomer = Customer.validateLogin(username, password);
-
+        Customer loggedInCustomer = Account.validateLogin(username, password);
         if (loggedInCustomer != null) {
             SessionManager.setCustomer(loggedInCustomer);
             try {
-                // Load scene
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/javafxbankapp/MainPage.fxml"));
                 Parent root = loader.load();
                 Stage stage = (Stage) ((javafx.scene.Node) event.getSource()).getScene().getWindow();
