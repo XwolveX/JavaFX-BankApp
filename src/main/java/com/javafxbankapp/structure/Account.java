@@ -25,7 +25,6 @@ public class Account {
 
         for (Account account : accounts) {
             if (account.getUsername().equals(username) && account.getPassword().equals(password)) {
-                // Tìm customer tương ứng với username (phone)
                 List<Customer> customers = readCustomersFromFile("src/main/java/com/javafxbankapp/Customers.txt");
                 for (Customer customer : customers) {
                     if (customer.getPhone().equals(username)) {
