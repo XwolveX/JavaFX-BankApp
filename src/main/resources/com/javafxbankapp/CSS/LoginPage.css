@@ -1,0 +1,61 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f0f4f3, #dfe9e4);
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Rectangle header */
+.rectangle-header {
+    -fx-fill: #44D62C;
+    -fx-stroke: #333;
+    -fx-stroke-width: 1;
+}
+
+/* Title text (OWL THE GOD) */
+.title-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #222;
+}
+
+/* Input labels */
+.label-text {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-fill: #333;
+}
+
+/* Text fields */
+.text-field, .password-field {
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1;
+    -fx-background-color: white;
+    -fx-prompt-text-fill: #888;
+}
+
+/* Button */
+.button {
+    -fx-background-color: #44D62C;
+    -fx-text-fill: black;
+    -fx-background-radius: 5;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0.0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: #44D62C;
+}
+
+/* Footer text */
+.footer-text {
+    -fx-fill: #666;
+    -fx-font-size: 11px;
+}
+
+/* Error label */
+#errorLabel {
+    -fx-text-fill: red;
+    -fx-font-size: 11px;
+}

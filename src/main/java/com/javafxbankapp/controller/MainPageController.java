@@ -7,48 +7,40 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MainPageController implements Initializable {
-
+public class MainPageController {
     @FXML
-    private ScrollPane scrollPane;  // Scrollable container
-
+    private BorderPane mainPagePane;
     @FXML
-    private AnchorPane anchorPane; // Content inside the ScrollPane
-
+    private HBox hBoxId;
     @FXML
-    private Label rankLabel; // Displays rank
-
+    private Label bankNameId;
     @FXML
-    private Label nameLabel;
+    private Region hBoxRegionId;
     @FXML
-    private Label balanceLabel;
+    private Button logoutButtonId;
     @FXML
-    private Label cardNumberLabel;
+    private VBox vBox1Id;
     @FXML
-    private Button viewInfoButton;
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        // Ensure contentPane is taller than ScrollPane to allow scrolling
-        anchorPane.setPrefHeight(1200);
-
-        Customer customer = SessionManager.getCustomer();
-        nameLabel.setText(customer.getName());
-        balanceLabel.setText("$" + customer.getBalance());
-        rankLabel.setText(customer.getRank());
-        cardNumberLabel.setText(customer.getPhone());
-    }
+    private Button dashboardButtonId;
     @FXML
-    public void showInfo() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Thông tin người dùng");
-        alert.setHeaderText("Chi tiết thông tin:");
-        alert.setContentText("Tên: John Doe\nSố tài khoản: 123456789");
-
-        alert.showAndWait();
-    }
+    private Button accountButtonId;
+    @FXML
+    private Button transferButtonId;
+    @FXML
+    private Button paymentButtonId;
+    @FXML
+    private Button cardButtonId;
+    @FXML
+    private Button settingsButtonId;
+    @FXML
+    private StackPane stackPaneId;
+    @FXML
+    private VBox vBox2Id ;
+    @FXML
+    private Label customerNameId;
 }

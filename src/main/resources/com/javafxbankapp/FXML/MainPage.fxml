@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainPagePane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javafxbankapp.controller.LoginPageController">
+
+   <stylesheets>
+      <URL value="@../CSS/MainPage.css" />
+   </stylesheets>
+   <top>
+      <HBox fx:id="hBoxId" styleClass="header">
+         <children>
+            <Label fx:id="bankNameId" styleClass="title-label" text="OWL Bank" />
+            <Region fx:id="hBoxRegionId" HBox.hgrow="ALWAYS" />
+            <Button fx:id="logoutButtonId" styleClass="logout-button" text="Logout" />
+         </children>
+         <padding>
+            <Insets bottom="15" left="20" right="20" top="15" />
+         </padding>
+      </HBox>
+   </top>
+
+   <left>
+      <VBox fx:id="vBox1Id" styleClass="sidebar">
+         <children>
+            <Button fx:id="dashboardButtonId" styleClass="nav-button" text="Dashboard" />
+            <Button fx:id="accountButtonId" styleClass="nav-button" text="Accounts" />
+            <Button fx:id="transferButtonId" styleClass="nav-button" text="Transfers" />
+            <Button fx:id="paymentButtonId" styleClass="nav-button" text="Payments" />
+            <Button fx:id="cardButtonId" styleClass="nav-button" text="Cards" />
+            <Button fx:id="settingsButtonId" styleClass="nav-button" text="Settings" />
+            <Region VBox.vgrow="ALWAYS" />
+            <Label styleClass="copyright" text="Nguyen Dinh Lam © 2025" />
+         </children>
+         <padding>
+            <Insets bottom="20" left="10" right="10" top="20" />
+         </padding>
+      </VBox>
+   </left>
+
+   <center>
+      <StackPane fx:id="stackPaneId">
+         <children>
+            <!-- Dashboard View -->
+            <VBox fx:id="vBox2Id" styleClass="content-area">
+               <children>
+                  <Label styleClass="welcome-text" text="Welcome, " />
+                  <Label fx:id="customerNameId" prefHeight="27.0" prefWidth="266.0" styleClass="account-type" text="NAME" />
+                  <Label styleClass="section-title" text="Account Overview" />
+
+                  <GridPane styleClass="account-overview">
+                     <columnConstraints>
+                        <ColumnConstraints percentWidth="50" />
+                        <ColumnConstraints percentWidth="50" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                     <children>
+                        <VBox styleClass="account-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                           <children>
+                              <Label styleClass="account-type" text="Checking Account" />
+                              <Label styleClass="account-number" text="**** 5678" />
+                              <Label styleClass="account-balance" text="money" />
+                           </children>
+                        </VBox>
+
+                        <VBox styleClass="account-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                           <children>
+                              <Label styleClass="account-type" text="Savings Account" />
+                              <Label styleClass="account-number" text="**** 9012" />
+                              <Label styleClass="account-balance" text="1212" />
+                           </children>
+                        </VBox>
+
+                        <VBox styleClass="account-card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                           <children>
+                              <Label styleClass="account-type" text="Credit Card" />
+                              <Label styleClass="account-number" text="**** 3456" />
+                              <Label styleClass="account-balance" text="32424" />
+                           </children>
+                        </VBox>
+
+                        <VBox styleClass="account-card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Label styleClass="account-type" text="Investment" />
+                              <Label styleClass="account-number" text="**** 7890" />
+                              <Label styleClass="account-balance" text="34,567.89" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets top="10" />
+                     </padding>
+                  </GridPane>
+
+                  <Label styleClass="section-title" text="Recent Transactions" />
+
+                  <TableView styleClass="transactions-table">
+                     <columns>
+                        <TableColumn text="Date" />
+                        <TableColumn text="Description" />
+                        <TableColumn text="Category" />
+                        <TableColumn text="Amount" />
+                        <TableColumn text="Balance" />
+                     </columns>
+                  </TableView>
+
+                  <HBox styleClass="quick-actions">
+                     <children>
+                        <Button styleClass="action-button" text="Transfer Money" />
+                        <Button styleClass="action-button" text="Pay Bills" />
+                        <Button styleClass="action-button" text="View Statements" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20" left="20" right="20" top="20" />
+               </padding>
+            </VBox>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
